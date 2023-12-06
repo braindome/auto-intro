@@ -25,7 +25,9 @@ class MainScreen(carContext: CarContext) : Screen(carContext) {
 
     }
 
-    */
+     */
+
+
 
 
 
@@ -50,7 +52,7 @@ class MainScreen(carContext: CarContext) : Screen(carContext) {
                                 ), 0, 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE
                             )
                         })
-                        .setOnClickListener { TODO() }
+                        .setOnClickListener { screenManager.push(DetailScreen(carContext, it.id)) }
                         // Setting Metadata is optional, but is required to automatically show the
                         // item's location on the provided map
                         .setMetadata(
@@ -71,8 +73,6 @@ class MainScreen(carContext: CarContext) : Screen(carContext) {
             .setItemList(itemListBuilder.build())
             .build()
     }
-
-
 
 
 
